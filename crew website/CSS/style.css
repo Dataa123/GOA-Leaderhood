@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.pcrew{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.pcrew{
+    font-size: 100px;
+    color: white;
+    text-shadow: 0 0 20px white;
+    background-color: transparent;
+    animation-name: panimation;
+    animation-duration: 1.6s;
+    animation-timing-function:ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes panimation{
+    0%{
+        transform: translateY(500px);
+        opacity: 0;
+    }
+    99%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: #0e2a2a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0px 0px 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+header{
+    height: 10vh;
+    width: 90%;
+    background-color: rgb(44,110,59);
+    border-radius: 10px;
+    box-shadow: 0 0 50px black ;
+    animation-name: fade-in1;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+@keyframes fade-in1{
+    0%{
+        transform:translateX(100px);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}    
+main{
+    background-color: rgb(30, 77, 41);
+    width: 90%;
+    height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 50px black;
+    animation-name: fade-in2;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+    
+@keyframes fade-in2{
+    0%{
+        transform:translateX(-100px);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+    
+#myp{
+    font-size: 100px;
+    color: white;
+}
+
+ul{
+    width: auto;
+    margin-right: 120px;
+}
+
+nav{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.diasacrew{
+    font-size: 40px;
+    font-weight: 500;
+    color: black;
+    font-family: Permanent Marker;
+    margin-left: 190px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.637);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.diasacrew:hover{
+    color: white;
+    text-shadow: 0 0 5px white;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: outfit;
+    font-weight: 500;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.637);
+    transition: 0.4s;
+}
+
+ul li a:hover{
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.637);
+}
+
+ul li{
+    list-style: none;
+}
+
+ul{
+    display: flex;
+    gap: 50px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+}
+
+main img{
+    margin-left: 80px;
+    border-radius: 50%;
+    box-shadow: 0 0 80px black;
+    
+}
+
+h1{
+    font-family: Permanent marker;
+    font-size: 40px;
+    text-shadow: 0 0 3px black;
+}
+
+.main p{
+    font-size: 30px;
+    text-shadow: 0 0 3px black;
+}
+
+.main{
+    margin-left: 170px;
+}
+
+.image{
+    max-width: 500px;
+}
+
+img{
+    width: 100%;
+}
+
+.menu{
+    display: none;
+}
+
+@media (max-width: 1320px){
+    .menu{
+        display: inline;
+        width: 5%;
+    }
+    .diasacrew{
+        margin-left: 0;
+    }
+    ul{
+        display: none;
+    }
+}
+
+@media (max-width: 600px){
+    header{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    h1{
+        font-size: 20px;
+    }
+    .text{
+        font-size: 5px;
+    }
+    main{
+        flex-direction: column;
+        align-items: center;
+    }
+    img{
+        width: 50%;
+    }
+    br{
+        display: none;
+    }
+}
